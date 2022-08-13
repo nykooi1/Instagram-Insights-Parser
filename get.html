@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Insights Reader</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style>
+/* Global Styles */
+body {
+	margin: 0;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 200;
+	line-height: 1.5;
+	background-color: #ffffff;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="/global.js?1"></script>
+</head>
+<body>
+    <script>
+        var url = "http://c9.noah.kim/insightsReader/images/eureka-2019-09-18.PNG";
+        var account = "eureka";
+        var insightsCount = 4;
+        
+        function readInsights(vUrl, account, insightsCount){
+            $.get("readInsights.php?url=" + url + "&account=" + account + "&insightsCount=" + insightsCount + "", function(data){
+                console.log(JSON.parse(data));
+            });        
+        }
+        
+        readInsights(url, account, insightsCount);
+    </script>
+</body>
+</html>
